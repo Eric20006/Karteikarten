@@ -1,0 +1,165 @@
+@import '../../../../../scss/export';
+
+/* Start: */
+
+.margin-title {
+  margin: $static-scale * 10;
+}
+.wrapper {
+ .container {
+    margin-bottom: $static-scale * 4 !important;
+    display: flex;
+    transition: all $normal-transition;
+    height: $scale-height * 2.5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: $normal-border;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      background-color: $special-color;
+    }
+    p {
+      text-align: center;
+    }
+ }
+  .hover-content {
+    .files-container {
+      display: none;
+      flex-direction:column;
+      justify-content: flex-start;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      border-bottom-left-radius: $normal-border;
+      border-bottom-right-radius: $normal-border;
+      .content {
+        margin-top: $static-scale * 3;
+        &:last-child {
+          margin-bottom: $static-scale * 3;
+        }
+      }
+    }
+    &:hover {
+      .files-container {
+        display: flex;
+      }
+    }
+ }
+ .mobile-cross {
+    display: none;
+ }
+}
+
+
+//Computer
+@media screen and (min-width: $screen-scale ) {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: $static-scale * 5 $static-scale * 10;
+    height: $scale-height * 2.5;
+    .container {
+      margin: $static-scale * 4 !important;
+    }
+  }
+}
+
+//Mobile
+@media screen and (max-width: $screen-scale) {
+  .margin-title {
+    margin-left: $static-scale * 20;
+    margin-top: $static-scale * 3;
+  }
+  .wrapper-mobile {
+    width: 100%;
+    height: 45%;
+    text-align: center;
+    transition: all $normal-transition ease-in-out;
+    position: absolute;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+    .hover-content {
+      display: none;
+    }
+  }
+  .none {
+    display: none;
+  }
+  .mobile-cross {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: $static-scale * 4 $static-scale * 8;
+    .mobile-cross-container {
+        display: block;
+        position: relative;
+        z-index: 1;
+        user-select: none;
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+        width: $static-scale * 8;
+        cursor: pointer;
+        .mobile-cross-content {
+            display: block;
+            width: $static-scale * 8;
+            height: $static-scale * 1;
+            margin-bottom: $static-scale * 1.25;
+            position: relative;
+            border-radius: $static-scale * 1.5;
+            z-index: 1;
+            transform-origin: 0 0;
+            transition: $normal-transition;
+        }
+        &:hover .mobile-cross-content:nth-child(2) {
+          transform: translateX($static-scale * 2.5);
+          background-color: $special-color;
+        }
+        .is-active {
+            &:nth-child(1) {
+                transform: translate(0px, -2px) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(15px);
+            }
+            &:nth-child(3) {
+                transform: translate(-3px, 3px) rotate(-45deg);
+            }
+        }
+    }
+    .is-active-hover {
+        &:hover span {
+            background-color: $special-color;
+        }
+    }
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-restcontainer {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    z-index:1;
+  }
+}

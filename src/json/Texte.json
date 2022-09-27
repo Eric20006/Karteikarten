@@ -1,0 +1,10 @@
+{
+  "impressum": {
+    "title": "Impressum",
+    "content": "Hey. Ich habe aus langer Weile diese Karteikarten App programmiert. Wenn du Verbesserungswünsche, -vorschläge hast oder dich gerne anmelden möchtest schreibe mir: eric.erfurt@mx.de. Ich hoffe, dass dir diese App weiterhilft und dich vielleicht bei deiner nächsten App inspiriert. Der Code ist einsehbar bei Github"
+  },
+  "datenschutz": {
+    "title": "Datenschutz",
+    "content": "Achtung: Diese Webseite hat aktuell keine Verschlüsselung. All deine Daten könnten abgefangen werden. Bei deiner erstmaligen Registrierung hast du es akzeptiert. Wir bitten diese Unannähmlichkeiten zu entschuldigen."
+  }
+}

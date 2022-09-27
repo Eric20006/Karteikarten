@@ -1,0 +1,33 @@
+@import '../../../../../scss/export';
+
+/* Start: */
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: $static-scale * 10;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  .container {
+    margin: $static-scale * 2.5;
+    width: $scale-width * 8;
+    min-width: $static-scale * 60;
+    min-height: $static-scale * 60;
+    height: $scale-width * 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius:$normal-border;
+    cursor: pointer;
+    transition: all $normal-transition;
+    &:hover {
+      background-color: $special-color;
+      h2 {
+        color: darken($color: $special-color , $amount: 10)
+      }
+    }
+  }
+}

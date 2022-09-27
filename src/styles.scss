@@ -1,1 +1,154 @@
-/* You can add global styles to this file, and also import other style files */
+@import './scss/export';
+
+/* Start */
+
+//General
+::selection {
+  color: darken($color: $special-color, $amount: 15)
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-size: $static-scale * 5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+//Important Classes
+.display-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.max-z-index {
+  z-index: 9999;
+}
+
+.middle-z-index {
+  z-index: 500;
+}
+
+.min-z-index {
+  z-index: 1;
+}
+
+.outer-p {
+  margin: $scale-height * 0.8 0;
+}
+
+.outer-title {
+  margin-bottom: $static-scale * 3.5;
+}
+
+//Important Tags
+h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: $scale-height * 1 !important;
+  color: $special-color;
+}
+
+h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: $scale-height * 0.8 !important;
+  color: $special-color;
+}
+
+h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: $scale-height * 0.8 !important;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: $scale-height * 0.6 !important;
+}
+
+a {
+  text-decoration: none !important;
+  transition: $normal-transition all !important;
+  &:hover {
+      color: $special-color !important;
+      text-decoration: underline !important;
+  }
+}
+
+
+//Main Theme Choosing
+@media (prefers-color-scheme: light) {
+    .main-theme-color {
+        background-color: $primeLight;
+    }
+    .second-theme-color {
+        background-color: $secondLight;
+    }
+    .second-theme-color-transparency {
+        background-color: transparentize($color: $secondLight, $amount: 0.3);
+    }
+    .theme-font-color {
+        color: $fontLight;
+    }
+    .theme-font-color-background {
+      background-color: $fontLight;
+    }
+    .second-theme-color-border-left {
+        border-left: $static-scale * 0.25 solid $secondLight;
+    }
+    .second-theme-color-border-top {
+        border-top: $static-scale * 0.25 solid $secondLight;
+    }
+    .third-theme-color-transparency {
+        &:hover {
+            background-color: transparentize($color: $thirdLight, $amount: 0.4);
+        }
+    }
+    a {
+      color: $fontLight;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .main-theme-color {
+        background-color: $primeDark;
+    }
+    .second-theme-color {
+        background-color: $secondDark;
+    }
+    .second-theme-color-transparency {
+        background-color: transparentize($color: $secondLight, $amount: 0.9);
+    }
+    .theme-font-color {
+        color: $fontDark;
+    }
+    .theme-font-color-background {
+      background-color: $fontDark;
+    }
+    .second-theme-color-border-left {
+        border-left: $static-scale * 0.25 solid $secondDark;
+    }
+    .second-theme-color-border-top {
+        border-top: $static-scale * 0.25 solid $secondDark;
+    }
+    .third-theme-color-transparency {
+        &:hover {
+            background-color: transparentize($color: $thirdDark, $amount: 0.4);
+        }
+    }
+    a {
+      color: $fontDark;
+    }
+}

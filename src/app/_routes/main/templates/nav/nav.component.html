@@ -1,0 +1,28 @@
+<div class="margin-title">
+  <h1>{{_nav.title}}</h1>
+</div>
+
+<div class="wrapper second-theme-color" [ngClass]="{'wrapper-mobile': triggerMobileView, 'none': !triggerMobileView}">
+    <div class="container hover-content">
+      <p>{{_nav.oldFile}}</p>
+      <div class="files-container second-theme-color">
+        <div class="content" *ngFor="let file of filename" (click)="router.changeRoute(fileLinkName)">
+          <p>{{file.name}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" *ngFor="let item of navForNGHelper" (click)="router.changeRoute(item.link)">
+      <p>{{item.name}}</p>
+    </div>
+</div>
+
+<div class="mobile">
+  <div class="mobile-cross" >
+    <div class="mobile-cross-container is-active-hover" (click)="changeTriggerMobileView();">
+      <span *ngFor=" let i of [0,1, 3] " class="theme-font-color-background mobile-cross-content" [ngClass]="{ 'is-active': triggerMobileView} "> </span>
+    </div>
+  </div>
+
+  <div [ngClass]="{ 'mobile-restcontainer': triggerMobileView}" (click)="changeTriggerMobileView(); "></div>
+</div>

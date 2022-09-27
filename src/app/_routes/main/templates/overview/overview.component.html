@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div class="container second-theme-color" *ngFor="let file of files" (click)="route.changeRoute('datei')">
+        <div class="outer-title">
+          <h2>{{file.name}}</h2>
+        </div>
+        <p class="outer-p">{{file.description}}</p>
+        <mat-icon class="outer-p">{{file.icon}}</mat-icon>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "nav": [{
+    "name": "Neue Datei erstellen: ",
+    "link": "datei"
+  },{
+    "name": "Ausloggen",
+    "link": "login"
+  },{
+    "name": "Impressum",
+    "link": "impressum"
+  },{
+    "name": "Datenschutz",
+    "link": "datenschutz"
+  }],
+
+  "title": "Karteikarten",
+  "oldFile": "Eine der Dateien öffnen: "
+}

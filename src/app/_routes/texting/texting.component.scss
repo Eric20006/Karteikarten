@@ -1,0 +1,31 @@
+@import '../../../scss/export';
+
+/* Start*/
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .container {
+    margin: $static-scale * 5;
+    border-radius: $normal-border;
+    padding: $static-scale * 3;
+    padding-bottom: $static-scale * 30 !important;
+    height: min-content;
+    width: 100%;
+    a {
+      mat-icon {
+        font-size: 15px;
+        transform: translatey(50%);
+      }
+      padding-left: $static-scale *10;
+      box-sizing: border-box;
+      font-size: 15px;
+      transition: all $normal-transition;
+      &:hover {
+        padding-left: 0;
+        padding-right: $static-scale * 10;
+      }
+    }
+  }
+}
